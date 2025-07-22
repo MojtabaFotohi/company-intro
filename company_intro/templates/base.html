@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}شرکت ساختمان‌سازی{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-white text-gray-800">
+    <header>
+        {% include 'includes/header.html' %}
+    </header>
+    <main class="min-h-screen">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        {% include 'includes/footer.html' %}
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}درباره ما - شرکت ساختمان‌سازی{% endblock %}
+
+{% block content %}
+<!-- بنر اصلی -->
+<section class="relative bg-cover bg-center h-96" style="background-image: url('');">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70"></div>
+    <div class="container mx-auto h-full flex items-center justify-center relative z-10">
+        <div class="text-center text-white animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">درباره شرکت ساختمان‌سازی</h1>
+            <p class="text-xl md:text-2xl">ما آینده‌ای بهتر را با کیفیت و نوآوری می‌سازیم</p>
+        </div>
+    </div>
+</section>
+
+<!-- بخش معرفی شرکت -->
+<section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8 animate-slideUp">ما کی هستیم؟</h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+            شرکت ساختمان‌سازی با بیش از ۲۰ سال تجربه در صنعت ساخت‌وساز، متعهد به ارائه پروژه‌های باکیفیت و نوآورانه است. ما با تکیه بر تیمی حرفه‌ای و استفاده از فناوری‌های روز، پروژه‌هایی ماندگار خلق می‌کنیم که نیازهای مشتریان را به بهترین شکل برآورده می‌کند.
+        </p>
+        <a href="" class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300">تماس با ما</a>
+    </div>
+</section>
+
+<!-- بخش تاریخچه -->
+<section class="py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">تاریخچه ما</h2>
+        <div class="relative">
+            <!-- خط زمانی -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-yellow-400 h-full"></div>
+            <div class="space-y-12">
+                <!-- رویداد ۱ -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 text-right pr-8">
+                        <h3 class="text-2xl font-semibold mb-2">تأسیس شرکت - ۱۳۸۰</h3>
+                        <p class="text-gray-600">آغاز فعالیت با هدف ارائه خدمات ساختمانی با کیفیت بالا.</p>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                <!-- رویداد ۲ -->
+                <div class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2 text-left pl-8">
+                        <h3 class="text-2xl font-semibold mb-2">اولین پروژه بزرگ - ۱۳۸۵</h3>
+                        <p class="text-gray-600">اجرای موفقیت‌آمیز مجتمع مسکونی نمونه در تهران.</p>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                <!-- رویداد ۳ -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 text-right pr-8">
+                        <h3 class="text-2xl font-semibold mb-2">گسترش تیم - ۱۳۹۰</h3>
+                        <p class="text-gray-600">جذب مهندسان و متخصصان برجسته برای تقویت تیم.</p>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+                <!-- رویداد ۴ -->
+                <div class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2 text-left pl-8">
+                        <h3 class="text-2xl font-semibold mb-2">دریافت جوایز - ۱۴۰۰</h3>
+                        <p class="text-gray-600">دریافت جایزه بهترین شرکت ساختمانی سال.</p>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- بخش ارزش‌ها -->
+<section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12">ارزش‌های ما</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-2xl font-semibold mb-3">کیفیت</h3>
+                <p class="text-gray-600">تعهد به ارائه بالاترین استانداردهای ساخت‌وساز.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-2xl font-semibold mb-3">نوآوری</h3>
+                <p class="text-gray-600">استفاده از فناوری‌های مدرن برای خلق پروژه‌های منحصربه‌فرد.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <h3 class="text-2xl font-semibold mb-3">مشتری‌مداری</h3>
+                <p class="text-gray-600">اولویت ما رضایت و اعتماد مشتریان است.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- بخش تیم -->
+<section class="py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12">تیم ما</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <img src="" alt="عضو تیم 1" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">مهندس احمدی</h3>
+                <p class="text-gray-600">مدیر پروژه</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <img src="" alt="عضو تیم 2" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">خانم رضایی</h3>
+                <p class="text-gray-600">طراح معماری</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <img src="" alt="عضو تیم 3" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">آقای محمدی</h3>
+                <p class="text-gray-600">مهندس سازه</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <img src="" alt="عضو تیم 4" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">خانم حسینی</h3>
+                <p class="text-gray-600">مشاور پروژه</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* انیمیشن‌ها */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-fadeIn { animation: fadeIn 1.5s ease-in-out; }
+    .animate-slideUp { animation: slideUp 1s ease-in-out; }
+</style>
+{% endblock %}

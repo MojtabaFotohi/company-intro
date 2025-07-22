@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}تماس با ما - شرکت ساختمان‌سازی{% endblock %}
+
+{% block content %}
+<!-- بنر اصلی با انیمیشن -->
+<section class="relative bg-cover bg-center h-screen" style="background-image: url('');">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/80"></div>
+    <div class="container mx-auto h-full flex items-center justify-center relative z-10">
+        <div class="text-center text-white animate-fadeIn">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-2xl tracking-tight">با ما در تماس باشید</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-8 font-light leading-relaxed">برای مشاوره در مورد پروژه‌های ساختمانی یا هر سؤالی، همین حالا با ما تماس بگیرید!</p>
+            <a href="#contact-form" class="inline-block bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-500 hover:shadow-lg transition-all duration-300">ارسال پیام</a>
+        </div>
+    </div>
+</section>
+
+<!-- بخش فرم تماس و اطلاعات -->
+<section class="py-24 bg-white" id="contact-form">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- فرم تماس -->
+            <div class="relative bg-gray-900 text-white p-8 rounded-2xl shadow-2xl animate-slideUp">
+                <h2 class="text-4xl font-bold mb-6 text-center text-yellow-400">پیام خود را ارسال کنید</h2>
+                <form method="post" action="" class="space-y-6">
+                    {% csrf_token %}
+                    <div class="relative">
+                        <label for="name" class="block text-lg font-medium mb-2 text-yellow-400">نام و نام خانوادگی</label>
+                        <input type="text" id="name" name="name" placeholder="نام شما" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/50 transition-all duration-300" required>
+                    </div>
+                    <div class="relative">
+                        <label for="email" class="block text-lg font-medium mb-2 text-yellow-400">ایمیل</label>
+                        <input type="email" id="email" name="email" placeholder="ایمیل شما" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/50 transition-all duration-300" required>
+                    </div>
+                    <div class="relative">
+                        <label for="message" class="block text-lg font-medium mb-2 text-yellow-400">پیام شما</label>
+                        <textarea id="message" name="message" placeholder="پیام خود را بنویسید" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/50 transition-all duration-300" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-500 hover:shadow-xl transition-all duration-300">ارسال پیام</button>
+                </form>
+            </div>
+            <!-- اطلاعات تماس -->
+            <div class="bg-white p-8 rounded-2xl shadow-2xl animate-slideUp">
+                <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">اطلاعات تماس</h2>
+                <div class="space-y-8 text-right">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">آدرس</h3>
+                            <p class="text-gray-600">تهران، خیابان نمونه، پلاک ۱۲۳</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">تلفن</h3>
+                            <p class="text-gray-600">۰۲۱-۱۲۳۴۵۶۷۸</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">ایمیل</h3>
+                            <p class="text-gray-600">info@company.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">ساعات کاری</h3>
+                            <p class="text-gray-600">شنبه تا پنج‌شنبه، ۹ صبح تا ۵ عصر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- بخش نقشه با افکت پارالاکس -->
+<section class="py-24 bg-gray-900">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12 text-white">ما را روی نقشه پیدا کنید</h2>
+        <div class="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153167!3d-37.81627927975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9f0b7b7b7b7!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sau!4v1631234567890!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* انیمیشن‌ها */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-fadeIn { animation: fadeIn 1.8s ease-in-out; }
+    .animate-slideUp { animation: slideUp 1.2s ease-in-out; }
+</style>
+{% endblock %}
