@@ -15,8 +15,8 @@
         <div class="text-center text-white animate-fadeIn">
             <h1 class="text-6xl md:text-7xl font-extrabold mb-6 drop-shadow-lg">آینده را با ما بسازید</h1>
             <p class="text-2xl md:text-3xl mb-8 font-light">طراحی و اجرای پروژه‌های ساختمانی با استانداردهای جهانی</p>
-            <a href=""
-            class="bg-yellow-400 text-white px-8 py-4 rounded-full font-semibold text-lg border-[3px] border-white hover:bg-white hover:text-[rgb(250,204,21)] hover:border-[rgb(250,204,21)] transition-all duration-300">
+            <a href="{% url 'projects:project_list'%}"
+            class="bg-yellow-400 text-white px-8 py-4 rounded-[15px] font-semibold text-lg border-[3px] border-white hover:bg-white hover:text-[rgb(250,204,21)] hover:border-[rgb(250,204,21)] transition-all duration-300">
                 کاوش در پروژه‌ها
             </a>
         </div>
@@ -30,13 +30,13 @@
         <h2 class="text-4xl font-bold mb-6 animate-slideUp">به شرکت ما خوش آمدید</h2>
         <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10">ما با بیش از ۲۰ سال تجربه در صنعت ساختمان‌سازی، متعهد به خلق فضاهایی هستیم که زندگی شما را بهتر کنند.</p>
         <div class="flex justify-center gap-6">
-            <a href=""
-                class="bg-white text-yellow-500  rounded border-2 border-yellow-400 px-6 py-2 text-base font-semibold tracking-wide shadow-sm hover:bg-yellow-400 hover:text-white hover:border-yellow-500 transition-all duration-300">
+            <a href="{% url 'blog:post_list'%}"
+                class="bg-white text-yellow-500  rounded-[15px] border-2 border-yellow-400 px-6 py-2 text-base font-semibold tracking-wide shadow-sm hover:bg-yellow-400 hover:text-white hover:border-yellow-500 transition-all duration-300">
                 بیشتر بدانید
             </a>
             
             <a href=""
-                class="bg-yellow-500 text-white  rounded border-2 border-white px-6 py-2 text-base font-semibold tracking-wide shadow-sm hover:bg-white hover:text-yellow-500  hover:border-yellow-400 transition-all duration-300">
+                class="bg-yellow-500 text-white  rounded-[15px] border-2 border-white px-6 py-2 text-base font-semibold tracking-wide shadow-sm hover:bg-white hover:text-yellow-500  hover:border-yellow-400 transition-all duration-300">
                 تماس با ما
             </a>
         </div>
@@ -99,8 +99,8 @@
                 </div>
             </div>
         </div>
-<a href=""
-   class="mt-10 inline-block bg-[rgb(250,204,21)] text-white px-8 py-4 font-semibold text-lg rounded-[10px] border-2 border-[rgb(250,204,21)] hover:bg-white hover:text-[rgb(250,204,21)] transition-all duration-300">
+<a href="{% url 'projects:project_list'%}"
+   class="mt-10 inline-block bg-[rgb(250,204,21)] text-white px-8 py-4 font-semibold text-lg rounded-[15px] border-2 border-[rgb(250,204,21)] hover:bg-white hover:text-[rgb(250,204,21)] transition-all duration-300">
   مشاهده همه پروژه‌ها
 </a>
     </div>
@@ -197,7 +197,7 @@
             <input type="text" placeholder="نام شما" class="w-full p-4 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400">
             <input type="email" placeholder="ایمیل شما" class="w-full p-4 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400">
             <textarea placeholder="پیام شما" class="w-full p-4 mb-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400" rows="4"></textarea>
-<button class="bg-[rgb(250,204,21)] text-white px-8 py-4 rounded-full font-semibold border-2 border-[rgb(250,204,21)] hover:bg-white hover:text-[rgb(250,204,21)] transition-all duration-300">
+<button class="bg-[rgb(250,204,21)] text-white px-8 py-4 rounded-[15px] font-semibold border-2 border-[rgb(250,204,21)] hover:bg-white hover:text-[rgb(250,204,21)] transition-all duration-300">
   ارسال پیام
 </button>
         </div>
