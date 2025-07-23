@@ -24,7 +24,7 @@
                 <a href="{% url 'home:home'%}" class="text-gray-700 hover:text-yellow-500 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-50">
                     خانه
                 </a>
-                <a href="" class="text-gray-700 hover:text-yellow-500 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-50">
+                <a href="{% url 'projects:project_list'%}" class="text-gray-700 hover:text-yellow-500 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-50">
                     پروژه‌ها
                 </a>
                 <a href="{% url 'blog:post_list'%}" class="text-gray-700 hover:text-yellow-500 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-50">
@@ -49,16 +49,16 @@
         <!-- منوی موبایل (مخفی به صورت پیش‌فرض) -->
         <nav id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 py-4">
             <div class="flex flex-col space-y-2">
-                <a href="" class="text-gray-700 hover:text-yellow-500 hover:bg-yellow-50 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">
+                <a href="{% url 'home:home'%}" class="text-gray-700 hover:text-yellow-500 hover:bg-yellow-50 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">
                     خانه
                 </a>
-                <a href="" class="text-gray-700 hover:text-yellow-500 hover:bg-yellow-50 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">
+                <a href="{% url 'projects:project_list'%}" class="text-gray-700 hover:text-yellow-500 hover:bg-yellow-50 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">
                     پروژه‌ها
                 </a>
-                <a href="" class="text-gray-700 hover:text-yellow-500 hover:bg-yellow-50 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">
+                <a href="{% url 'blog:post_list'%}" class="text-gray-700 hover:text-yellow-500 hover:bg-yellow-50 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">
                     وبلاگ
                 </a>
-                <a href="#contact" class="bg-yellow-400 text-white font-medium py-3 px-4 rounded-lg hover:bg-yellow-500 transition-colors duration-300 text-center mt-2">
+                <a href="{% url 'home:contact'%}" class="bg-yellow-400 text-white font-medium py-3 px-4 rounded-lg hover:bg-yellow-500 transition-colors duration-300 text-center mt-2">
                     تماس با ما
                 </a>
             </div>
