@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ post.title }} - شرکت ساختمان‌سازی{% endblock %}
+
+{% block content %}
+<!-- بنر اصلی -->
+<section class="relative bg-cover bg-center h-[500px]" style="background-image: url('{% static 'images/DeWatermark.ai_1753280742645.jpeg' %}');">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900/60 to-gray-900/90"></div>
+    <div class="container mx-auto h-full flex items-center justify-center relative z-10">
+        <div class="text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-2xl tracking-wide animate-fadeInDown">{{ post.title }}</h1>
+            <p class="text-xl md:text-2xl text-gray-300 animate-fadeInUp">{{ post.created_at|date:"Y/m/d" }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- محتوای پست -->
+<section class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-3xl shadow-xl">
+            {% if post.image %}
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-full h-96 object-cover rounded-2xl mb-8 shadow-lg transform hover:scale-105 transition-transform duration-500">
+            {% else %}
+            <img src="{% static 'images/post-placeholder.jpg' %}" alt="{{ post.title }}" class="w-full h-96 object-cover rounded-2xl mb-8 shadow-lg transform hover:scale-105 transition-transform duration-500">
+            {% endif %}
+            <div class="prose prose-lg prose-gray max-w-none text-right">
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">{{ post.title }}</h2>
+                <p class="text-gray-600 leading-relaxed">{{ post.content|safe }}</p>
+            </div>
+            <div class="mt-12 flex justify-between items-center">
+                <a href="{% url 'blog:post_list' %}" class="inline-flex items-center bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-all duration-300">
+                    بازگشت به وبلاگ
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </a>
+                <span class="text-gray-500 text-sm">منتشر شده در {{ post.created_at|date:"Y/m/d" }}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* انیمیشن‌های پیشرفته */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInDown { animation: fadeInDown 1.5s ease-in-out; }
+    .animate-fadeInUp { animation: fadeInUp 1.5s ease-in-out; }
+</style>
+{% endblock %}
