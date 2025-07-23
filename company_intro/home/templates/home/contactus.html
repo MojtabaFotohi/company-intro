@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}تماس با ما - شرکت ساختمان‌سازی{% endblock %}
 
 {% block content %}
 <!-- بنر اصلی با انیمیشن -->
-<section class="relative bg-cover bg-center h-screen" style="background-image: url('');">
+<section class="relative bg-cover bg-center h-[650px]" style="background-image: url('{% static 'images/2f724f09-2cd4-45a5-80f4-3de353b04275-americas-most-historic-buildings-state-capitol-washington-dc.jpg' %}');">
     <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/80"></div>
     <div class="container mx-auto h-full flex items-center justify-center relative z-10">
         <div class="text-center text-white animate-fadeIn">
