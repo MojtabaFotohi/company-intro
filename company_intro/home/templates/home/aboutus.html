@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}درباره ما - شرکت ساختمان‌سازی{% endblock %}
 
 {% block content %}
 <!-- بنر اصلی -->
-<section class="relative bg-cover bg-center h-96" style="background-image: url('');">
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70"></div>
+<section class="relative bg-cover bg-center h-[650px]" style="background-image: url('{% static 'images/DeWatermark.ai_1753280742645.jpeg' %}');">
+    <!-- Overlay یکنواخت -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+
     <div class="container mx-auto h-full flex items-center justify-center relative z-10">
         <div class="text-center text-white animate-fadeIn">
             <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">درباره شرکت ساختمان‌سازی</h1>
@@ -14,6 +16,7 @@
     </div>
 </section>
 
+
 <!-- بخش معرفی شرکت -->
 <section class="py-20 bg-gray-100">
     <div class="container mx-auto px-4 text-center">
@@ -21,98 +24,112 @@
         <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
             شرکت ساختمان‌سازی با بیش از ۲۰ سال تجربه در صنعت ساخت‌وساز، متعهد به ارائه پروژه‌های باکیفیت و نوآورانه است. ما با تکیه بر تیمی حرفه‌ای و استفاده از فناوری‌های روز، پروژه‌هایی ماندگار خلق می‌کنیم که نیازهای مشتریان را به بهترین شکل برآورده می‌کند.
         </p>
-        <a href="" class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300">تماس با ما</a>
+        <a href="{% url 'home:contact'%}"
+   class="bg-[rgb(250,204,21)] text-white px-8 py-3 rounded-[15px] font-semibold border-2 border-[rgb(250,204,21)] hover:bg-white hover:text-[rgb(250,204,21)] hover:border-[rgb(250,204,21)] transition-all duration-300">
+  تماس با ما
+</a>
+
     </div>
 </section>
 
 <!-- بخش تاریخچه -->
 <section class="py-20">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">تاریخچه ما</h2>
-        <div class="relative">
-            <!-- خط زمانی -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-yellow-400 h-full"></div>
-            <div class="space-y-12">
-                <!-- رویداد ۱ -->
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 text-right pr-8">
-                        <h3 class="text-2xl font-semibold mb-2">تأسیس شرکت - ۱۳۸۰</h3>
-                        <p class="text-gray-600">آغاز فعالیت با هدف ارائه خدمات ساختمانی با کیفیت بالا.</p>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">تاریخچه ما</h2>
+            <div class="relative timeline">
+                <div class="space-y-12">
+                    <!-- رویداد ۱ -->
+                    <div class="event relative flex flex-col md:flex-row items-center" data-aos="fade-right">
+                        <div class="event-card md:w-1/2 pr-8">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">تأسیس شرکت - ۱۳۸۰</h3>
+                            <p class="text-gray-600">آغاز فعالیت با هدف ارائه خدمات ساختمانی با کیفیت بالا.</p>
+                        </div>
+                        <div class="md:w-1/2"></div>
+                        <div class="marker" style="top: 1.5rem;"></div>
                     </div>
-                    <div class="md:w-1/2"></div>
-                </div>
-                <!-- رویداد ۲ -->
-                <div class="flex flex-col md:flex-row-reverse items-center">
-                    <div class="md:w-1/2 text-left pl-8">
-                        <h3 class="text-2xl font-semibold mb-2">اولین پروژه بزرگ - ۱۳۸۵</h3>
-                        <p class="text-gray-600">اجرای موفقیت‌آمیز مجتمع مسکونی نمونه در تهران.</p>
+                    <!-- رویداد ۲ -->
+                    <div class="event relative flex flex-col md:flex-row-reverse items-center" data-aos="fade-left">
+                        <div class="event-card md:w-1/2 pl-8">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">اولین پروژه بزرگ - ۱۳۸۵</h3>
+                            <p class="text-gray-600">اجرای موفقیت‌آمیز مجتمع مسکونی نمونه در تهران.</p>
+                        </div>
+                        <div class="md:w-1/2"></div>
+                        <div class="marker" style="top: 1.5rem;"></div>
                     </div>
-                    <div class="md:w-1/2"></div>
-                </div>
-                <!-- رویداد ۳ -->
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 text-right pr-8">
-                        <h3 class="text-2xl font-semibold mb-2">گسترش تیم - ۱۳۹۰</h3>
-                        <p class="text-gray-600">جذب مهندسان و متخصصان برجسته برای تقویت تیم.</p>
+                    <!-- رویداد ۳ -->
+                    <div class="event relative flex flex-col md:flex-row items-center" data-aos="fade-right">
+                        <div class="event-card md:w-1/2 pr-8">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">گسترش تیم - ۱۳۹۰</h3>
+                            <p class="text-gray-600">جذب مهندسان و متخصصان برجسته برای تقویت تیم.</p>
+                        </div>
+                        <div class="md:w-1/2"></div>
+                        <div class="marker" style="top: 1.5rem;"></div>
                     </div>
-                    <div class="md:w-1/2"></div>
-                </div>
-                <!-- رویداد ۴ -->
-                <div class="flex flex-col md:flex-row-reverse items-center">
-                    <div class="md:w-1/2 text-left pl-8">
-                        <h3 class="text-2xl font-semibold mb-2">دریافت جوایز - ۱۴۰۰</h3>
-                        <p class="text-gray-600">دریافت جایزه بهترین شرکت ساختمانی سال.</p>
+                    <!-- رویداد ۴ -->
+                    <div class="event relative flex flex-col md:flex-row-reverse items-center" data-aos="fade-left">
+                        <div class="event-card md:w-1/2 pl-8">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">دریافت جوایز - ۱۴۰۰</h3>
+                            <p class="text-gray-600">دریافت جایزه بهترین شرکت ساختمانی سال.</p>
+                        </div>
+                        <div class="md:w-1/2"></div>
+                        <div class="marker" style="top: 1.5rem;"></div>
                     </div>
-                    <div class="md:w-1/2"></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- بخش ارزش‌ها -->
 <section class="py-20 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-12">ارزش‌های ما</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <h3 class="text-2xl font-semibold mb-3">کیفیت</h3>
-                <p class="text-gray-600">تعهد به ارائه بالاترین استانداردهای ساخت‌وساز.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <h3 class="text-2xl font-semibold mb-3">نوآوری</h3>
-                <p class="text-gray-600">استفاده از فناوری‌های مدرن برای خلق پروژه‌های منحصربه‌فرد.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <h3 class="text-2xl font-semibold mb-3">مشتری‌مداری</h3>
-                <p class="text-gray-600">اولویت ما رضایت و اعتماد مشتریان است.</p>
-            </div>
-        </div>
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-extrabold text-gray-800 mb-14">ارزش‌های ما</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 border-t-4 border-indigo-500">
+        <div class="text-4xl mb-4">✅</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">کیفیت</h3>
+        <p class="text-gray-600 leading-relaxed">تعهد به ارائه بالاترین استانداردهای ساخت‌وساز.</p>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 border-t-4 border-pink-500">
+        <div class="text-4xl mb-4">🚀</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">نوآوری</h3>
+        <p class="text-gray-600 leading-relaxed">استفاده از فناوری‌های مدرن برای خلق پروژه‌های منحصربه‌فرد.</p>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 border-t-4 border-emerald-500">
+        <div class="text-4xl mb-4">🤝</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">مشتری‌مداری</h3>
+        <p class="text-gray-600 leading-relaxed">اولویت ما رضایت و اعتماد مشتریان است.</p>
+      </div>
+      
     </div>
+  </div>
 </section>
+
 
 <!-- بخش تیم -->
 <section class="py-20">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-12">تیم ما</h2>
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">تیم حرفه‌ای ما</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="bg-white p-6 rounded-xl shadow-md">
-                <img src="" alt="عضو تیم 1" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <img src="{% static 'images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash-3.png' %}" alt="عضو تیم 1" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">مهندس احمدی</h3>
-                <p class="text-gray-600">مدیر پروژه</p>
+                <p class="text-gray-600">مدیر پروژه با تجربه</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md">
-                <img src="" alt="عضو تیم 2" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
-                <h3 class="text-xl font-semibold mb-2">خانم رضایی</h3>
-                <p class="text-gray-600">طراح معماری</p>
+                <img src="{% static 'images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash-1.png' %}" alt="عضو تیم 2" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-2">آقای رضایی</h3>
+                <p class="text-gray-600">طراح معماری ارشد</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md">
-                <img src="" alt="عضو تیم 3" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <img src="{% static 'images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash-4.png' %}" alt="عضو تیم 3" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">آقای محمدی</h3>
                 <p class="text-gray-600">مهندس سازه</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md">
-                <img src="" alt="عضو تیم 4" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+                <img src="{% static 'images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash-5.png' %}" alt="عضو تیم 4" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
                 <h3 class="text-xl font-semibold mb-2">خانم حسینی</h3>
                 <p class="text-gray-600">مشاور پروژه</p>
             </div>
@@ -132,5 +149,67 @@
     }
     .animate-fadeIn { animation: fadeIn 1.5s ease-in-out; }
     .animate-slideUp { animation: slideUp 1s ease-in-out; }
+
+    
+
+  body {
+            font-family: 'Vazir', sans-serif;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            background: #facc15;
+            height: 100%;
+            z-index: 1;
+        }
+        .event-card {
+            background: linear-gradient(to bottom, #fffbeb, #ffffff);
+            border: 2px solid #facc15;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #eab308;
+        }
+        .marker {
+            width: 18px;
+            height: 18px;
+            background: #facc15;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            transition: transform 0.3s ease;
+        }
+        .event:hover .marker {
+            transform: translateX(-50%) scale(1.3);
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 10%;
+            }
+            .event .marker {
+                left: 10%;
+            }
+            .event-card {
+                width: 100%;
+                padding-right: 15%;
+                text-align: right;
+            }
+        }
 </style>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+
 {% endblock %}
