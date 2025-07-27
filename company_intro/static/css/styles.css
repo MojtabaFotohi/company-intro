@@ -1,0 +1,23 @@
+/* تعریف @font-face برای خانواده وزیر */
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir.woff2') format('woff2'),
+       url('../fonts/Vazir.woff') format('woff'),
+       url('../fonts/Vazir.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir-Bold.woff2') format('woff2'),
+       url('../fonts/Vazir-Bold.woff') format('woff'),
+       url('../fonts/Vazir-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+/* اگر قصد دارید وزن‌های Light(300)، Medium(500)، Thin(100) را هم داشته باشید، مشابه بالا تعریف کنید */
+
+/* اعمال فونت وزیر به کل سند */
+body {
+  font-family: 'Vazir', sans-serif;
+}
